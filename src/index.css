@@ -1,0 +1,361 @@
+/* 📌 Fondo general */
+body {
+  margin: 0;
+  padding-top: 60px; 
+  font-family: 'Arial', sans-serif;
+  background: url('https://images.alphacoders.com/107/thumb-1920-107611.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #FFD700;
+}
+
+/* 📌 Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Ajusta según el tamaño de tu navbar */
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5);
+  z-index: 1000; /* Asegura que siempre esté por encima */
+}
+
+
+.logo {
+  font-size: 24px;
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo:hover {
+  color: white;
+}
+
+/* 📌 Dropdown de favoritos */
+.favorites-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background: black;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #FFD700;
+  min-width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #FFD700;
+  z-index: 999;
+}
+
+.favorites-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  color: #FFD700;
+}
+
+.favorite-item span {
+  cursor: pointer;
+}
+
+.favorite-item button {
+  background: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.scroll-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px); /* Resta la altura del navbar */
+}
+
+.lists-container {
+  width: 90%;
+  max-width: 1400px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px #FFD700;
+}
+
+/* 📌 Listas */
+.list-title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 10px #FFD700;
+}
+
+.list-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 10px;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #FFD700 black;
+}
+
+.list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: #FFD700;
+  border-radius: 10px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* 📌 Tarjetas */
+.card-starwars {
+  width: 250px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #FFD700;
+  position: relative;
+}
+
+.card-starwars:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  object-fit: cover;
+  border-bottom: 2px solid #FFD700;
+}
+
+/* 📌 Botones en tarjetas */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-starwars {
+  background: black;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 10px #FFD700;
+}
+
+.btn-starwars:hover {
+  background: #FFD700;
+  color: black;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px #FFD700;
+}
+
+/* 📌 Botón de favoritos */
+.btn-favorite {
+  background: black;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.btn-favorite:hover {
+  background-color: #FFD700;
+  color: black;
+}
+
+/* 📌 Vista de detalles */
+.details-container {
+  background: url("https://images.alphacoders.com/107/thumb-1920-107611.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* 📌 Tarjeta de detalles */
+.details-card {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0px 0px 20px #FFD700;
+  border: 2px solid #FFD700;
+  text-align: center;
+}
+
+.details-image {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* 📌 Lista de información */
+.info-list p {
+  font-size: 18px;
+  color: #FFD700;
+  margin: 5px 0;
+}
+
+/* 📌 Título */
+.title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #FFD700;
+  color: #FFD700;
+}
+
+/* 📌 Botón de Volver */
+.btn-back {
+  background: black;
+  color: #FFD700;
+  padding: 10px 20px;
+  border: 2px solid #FFD700;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.btn-back:hover {
+  background: #FFD700;
+  color: black;
+}
+
+/* 📌 Texto de carga y error */
+.loading-text {
+  font-size: 20px;
+  color: white;
+}
+
+.error-text {
+  font-size: 20px;
+  color: red;
+}
+
+.fav-count {
+  background: #FFD700;
+  color: black;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+
+/* 🔍 Contenedor del buscador */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* 🔍 Input de búsqueda */
+.search-input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #FFD700;
+  background-color: black;
+  color: #FFD700;
+  outline: none;
+  width: 200px;
+  transition: 0.3s;
+}
+
+.search-input:focus {
+  width: 250px;
+}
+
+/* 📜 Resultados de autocompletado */
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #FFD700;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #FFD700;
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  z-index: 1000;
+}
+
+.search-results li {
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #FFD700;
+}
+
+.search-results li:hover {
+  background: #FFD700;
+  color: black;
+}
